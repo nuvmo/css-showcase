@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(open *)",
+      "Bash(curl -s http://localhost:7420/)",
+      "Bash(curl -s http://localhost:7420/js/app.js)",
+      "Bash(curl -s http://localhost:7420/js/demos.js)",
+      "Bash(node --check /Users/martinstewart/Documents/Repos/animations/js/demos.js)",
+      "Bash(node --check /Users/martinstewart/Documents/Repos/animations/js/app.js)"
+    ]
+  }
+}
