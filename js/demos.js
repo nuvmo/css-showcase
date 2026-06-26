@@ -1874,7 +1874,7 @@ const DEMOS = [
   }
 
   .label {
-    color: rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.7);
     font-size: 0.75rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -1929,28 +1929,24 @@ const DEMOS = [
   }
 
   /*
-    The trick:
-    A yellow circle with an INSET box-shadow whose colour = the sky background.
-    The offset shadow "covers" part of the yellow, leaving a crescent visible.
-    No clip-path, no extra elements!
+    Two-circle crescent: the element's circular border gives one arc; the inset
+    shadow's inner boundary — the same border-radius contracted by the spread,
+    then shifted by the X/Y offset — gives the other arc. The yellow shadow
+    paints the crescent region between the two arcs; the dark background fills
+    the rest.
   */
   .moon {
     width: min(40vmin, 220px);
     height: min(40vmin, 220px);
     border-radius: 50%;
-    background: #fde68a;
+    background: #03030b;
     box-shadow:
-      inset -55px -15px 0 22px #03030b,
+      inset -55px -15px 0 22px #fde68a,
       0 0 60px 20px rgba(253,230,138,.15),
       0 0 120px 40px rgba(253,230,138,.07);
-    animation: moon-drift 8s ease-in-out infinite;
-  }
-  @keyframes moon-drift {
-    0%,100% { transform: translateY(0)    rotate(-5deg); }
-    50%      { transform: translateY(-18px) rotate(5deg); }
   }
 
-  .label { color: rgba(255,255,255,.15); font-size:.75rem; letter-spacing:.2em; text-transform:uppercase; }
+  .label { color: rgba(255,255,255,.7); font-size:.75rem; letter-spacing:.2em; text-transform:uppercase; }
 </style>
 </head>
 <body>
@@ -2017,7 +2013,7 @@ const DEMOS = [
     to   { --mouth: 44deg; }
   }
 
-  .label { color: rgba(255,255,255,.15); font-size:.75rem; letter-spacing:.2em; text-transform:uppercase; }
+  .label { color: rgba(255,255,255,.7); font-size:.75rem; letter-spacing:.2em; text-transform:uppercase; }
 </style>
 </head>
 <body>
@@ -2085,7 +2081,7 @@ const DEMOS = [
     --c1:#34d399; --c2:#06b6d4; --glow:rgba(52,211,153,.5); --t:clamp(5px,2vmin,10px); --dur:.8s;
   }
 
-  .label { color:rgba(255,255,255,.15); font-size:.75rem; letter-spacing:.2em; text-transform:uppercase; }
+  .label { color:rgba(255,255,255,.7); font-size:.75rem; letter-spacing:.2em; text-transform:uppercase; }
 </style>
 </head>
 <body>
@@ -2193,7 +2189,7 @@ const DEMOS = [
     100% { transform:scale(.8); opacity:.3; box-shadow:0 0 0   0 rgba(255,255,255,.0);  }
   }
 
-  .label { color:rgba(255,255,255,.15); font-size:.75rem; letter-spacing:.2em; text-transform:uppercase; }
+  .label { color:rgba(255,255,255,.7); font-size:.75rem; letter-spacing:.2em; text-transform:uppercase; }
 </style>
 </head>
 <body>
@@ -2273,7 +2269,7 @@ const DEMOS = [
   }
   @keyframes counter-spin { to { transform: rotate(-180deg); } }
 
-  .label { color:rgba(255,255,255,.2); font-size:.75rem; letter-spacing:.2em; text-transform:uppercase; }
+  .label { color:rgba(255,255,255,.7); font-size:.75rem; letter-spacing:.2em; text-transform:uppercase; }
 </style>
 </head>
 <body>
